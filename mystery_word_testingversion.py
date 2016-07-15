@@ -28,6 +28,7 @@ def display_board(guesses_left, letters_to_display,myst_word, mwl, all_guesses):
     for each in letters_to_display:
         print(each,end='')
     print("\n")
+    return letters_to_display # --------------------- TEST --------------------
     print("\t",end='')
     for each in mwl:
         print("_ ",end='')
@@ -110,6 +111,29 @@ def get_word_list():
         for line in f:
             word_list.append(line)
     return word_list
+
+def easy_words(word_list):
+    ew = []                              # ======== for test
+    for each in word_list:
+        if len(each) > 3 and len(each) < 7:
+            ew.append(each)
+    return ew
+
+def medium_words(word_list):
+    mw = []                               # ======== for test
+    for each in word_list:
+        if len(each) > 5 and len(each) < 9:
+            mw.append(each)
+    return mw
+
+def hard_words(word_list):
+    hw = []                               # ======== for test
+    for each in word_list:
+        if len(each) > 7:
+            hw.append(each)
+    return hw
+
+
 
 #========================================================================
 
